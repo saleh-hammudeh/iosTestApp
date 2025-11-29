@@ -22,16 +22,16 @@ struct Hw1: View {
                             Text(email.isEmpty ? "Email" : email)
                                 .font(.subheadline)
                         }
-                        
                         Spacer()
                         
-                        Button(action: {}) {
-                            Text("Edit")
-                                .font(.callout)
-                        }
                     }
                     VStack(spacing: 12) {
-                        
+                        HStack(spacing: 12) {
+                            Text("Edit profile")
+                                .font(.system(size: 20))
+                                
+                            Spacer()
+                        }
                         TextField("Enter name", text: $name)
                             .padding(10)
                             .background(Color.white)
@@ -63,7 +63,6 @@ struct Hw1: View {
                         Text("Asia").tag(3)
                     }
                     .pickerStyle(SegmentedPickerStyle())
-                    .padding()
                 }
                 .padding(10)
                 .background(Color.gray.opacity(0.2))
@@ -85,6 +84,14 @@ struct Hw1: View {
             }
             .navigationTitle("Account")
             .navigationBarTitleDisplayMode(.large)
+            Button(action: {}) {
+                Text("Save Change")
+                    .foregroundColor(.white)
+                    .frame(maxWidth: UIScreen.main.bounds.width * 0.8)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(12)
+            }
         }
         
     }
