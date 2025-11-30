@@ -15,7 +15,7 @@ struct Hw1: View {
                         Image(systemName: "person.crop.circle.fill")
                             .font(.system(size: 50))
                             .foregroundStyle(.tint)
-                        
+                            
                         VStack(alignment: .leading, spacing: 4) {
                             Text(name.isEmpty ? "Name" : name)
                                 .font(.headline)
@@ -86,7 +86,7 @@ struct Hw1: View {
             .navigationBarTitleDisplayMode(.large)
             Button(action: {}) {
                 Text("Save Change")
-                    .foregroundColor(.white)
+                    
                     .frame(maxWidth: UIScreen.main.bounds.width * 0.8)
                     .padding()
                     .background(Color.blue)

@@ -21,11 +21,17 @@ struct ContentView: View {
                     
                 ){
                     Text("Hw1")
-                        .frame(width: 300, height: 200,alignment: .center)
+                        .frame(width: UIScreen.main.bounds.width*0.8, height: 50,alignment: .center)
                         .background(Color.gray)
-                        .foregroundColor(Color.black)
-                    
-                    
+                }
+                
+                NavigationLink (
+                    destination: WelcomeView()
+
+                ){
+                    Text("Hw2")
+                        .frame(width: UIScreen.main.bounds.width*0.8, height: 50,alignment: .center)
+                        .background(Color.gray)
                 }
             }
             .padding()
