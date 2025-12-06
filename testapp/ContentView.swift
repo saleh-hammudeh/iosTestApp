@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var userManager = UserManager()
+
     var body: some View {
         NavigationView{
             
@@ -30,6 +32,17 @@ struct ContentView: View {
 
                 ){
                     Text("Hw2")
+                        .frame(width: UIScreen.main.bounds.width*0.8, height: 50,alignment: .center)
+                        .background(Color.gray)
+                }
+                
+                NavigationLink (
+                    destination: AddOrShowUsers()
+                        .environmentObject(userManager)
+
+
+                ){
+                    Text("Hw3")
                         .frame(width: UIScreen.main.bounds.width*0.8, height: 50,alignment: .center)
                         .background(Color.gray)
                 }
